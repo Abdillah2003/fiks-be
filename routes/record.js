@@ -177,8 +177,8 @@ router.get('/api/jamur', (req, res) => {
     });
   
   // Update Users
-  router.put('/api/updateUser', (req, res) => {
-    const userId = req.body.user_id;
+  router.put('/api/updateUser/:user_id', (req, res) => {
+    const userId = req.params.user_id;
     const userName = req.body.username;
     const userEmail = req.body.user_email;
     const userPassword = req.body.user_password;
